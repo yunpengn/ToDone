@@ -21,4 +21,4 @@ I am currently a Year 1 undergraduate student at NUS. My major is Computer Engin
 
 
 ## Others
-This project is under <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU Public License (GPL) 3.0</a>.
+This project is under [GNU Public License (GPL) 3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
