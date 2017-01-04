@@ -1,0 +1,22 @@
+<h1>ToDone - A Personal Task Manager</h1>
+
+<h2>All events</h2>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Time</th>
+		<th>Place</th>
+	</tr>
+
+	<% @all_events.each do |i| %>
+	<tr>
+		<td><%= i.title %></td>
+		<td><%= i.time %></td>
+		<td><%= i.place %></td>
+		<td><%= link_to 'Show details', event_path(i) %></td>
+	</tr>
+	<% end %>
+</table>
+
+<br><br><br><br>
+<%= link_to 'New event', new_event_path %>
