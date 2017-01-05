@@ -8,20 +8,39 @@ class EventsController < ApplicationController
 	end
 
 	def  new
-		# There is no need to declare a new instance variable in the method "new", because the data should be retrieved from the "create" method
-		# since render does not issue a new request to the browser. Meanwhile, since we have already defined "data" in the "create", we actually 
-		# do not need to create any more variables.
-		
-		#@event = Event.new
+		@event = Event.new
+	end
+
+	def edit
+		@event = Event.find(params[:id])
 	end
 
 	def create
-		@data = Event.new(event_params)
-		if @data.save
-			redirect_to @data
+		# There is a naming convention when using Ruby on Rails to build a Web Application
+		# You had better name the below instance variable as "event", in its singular form
+		@event = Event.new(event_params)
+		if @event.save
+			redirect_to @event
 		else
 			render 'new'
 		end
+	end
+
+	def update
+		@event = Event.find(params[:id])
+
+		if @event.update(event_params)
+			redirect_to @event
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@event = Event.find(params[:id])
+		@event.destroy
+
+		redirect_to events_path
 	end
 
 	private

@@ -14,6 +14,8 @@
 		<td><%= i.time %></td>
 		<td><%= i.place %></td>
 		<td><%= link_to 'Show details', event_path(i) %></td>
+		<td><%= link_to 'Edit',edit_event_path(i) %></td>
+		<td><%= link_to 'Delete', event_path(i), method: :delete, data: { confirm: 'Are you sure to delete the selected event?' } %></td>
 	</tr>
 	<% end %>
 </table>

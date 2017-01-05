@@ -1,0 +1,36 @@
+<!--
+Why this single form can be used in every page without special configuration?
+Because @event is a resource corresponding to a full set of RESTful routes, and Rails is able to infer which URI and which method to use.
+For more details, check Resource-oriented Style
+-->
+<%= form_for @event do |fr| %>
+	<% if @event.errors.any? %>
+	<div id="error_explanation">
+		<h3>The following <%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved: </h3>
+		<ul>
+			<% @event.errors.full_messages.each do |i| %>
+			<li><%= i %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+
+	<p>
+		<%= fr.label :title %>
+		<%= fr.text_field :title %>
+	</p>
+
+	<p>
+		<%= fr.label :time %>
+		<%= fr.text_field :time %>
+	</p>
+
+	<p>
+		<%= fr.label :place %>
+		<%= fr.text_field :place %>
+	</p>
+
+	<p>
+		<%= fr.submit %>
+	</p>
+<% end %>
