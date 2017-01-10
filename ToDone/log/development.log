@@ -1887,3 +1887,260 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 69ms (Views: 65.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-05 22:39:50 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 285ms (Views: 260.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-05 22:40:08 +0800
+  
+ActionController::RoutingError (undefined local variable or method `index' for EventsController:Class):
+  
+app/controllers/events_controller.rb:2:in `<class:EventsController>'
+app/controllers/events_controller.rb:1:in `<top (required)>'
+  Rendering C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered collection of C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (37.7ms)
+  Rendered C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.6ms)
+  Rendering C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (951.0ms)
+Started GET "/events" for ::1 at 2017-01-05 22:40:28 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (15.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 69ms (Views: 42.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/events/new" for ::1 at 2017-01-05 22:40:31 +0800
+Processing by EventsController#new as HTML
+Filter chain halted as #<Proc:0x0000000cb4c268@C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2017-01-05 22:40:42 +0800
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (84.6ms)
+  Rendered events/new.html.erb within layouts/application (84.6ms)
+Completed 200 OK in 147ms (Views: 135.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-05 22:40:43 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 69ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2017-01-05 22:41:50 +0800
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (15.6ms)
+  Rendered events/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 69ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-05 22:41:51 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 78ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2017-01-05 22:41:53 +0800
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (15.6ms)
+  Rendered events/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 84ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2017-01-05 22:42:18 +0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0eTjU0SJUqkYKyNWwN+dE+WiQ26ApEebIyAyKQkk9qEGcztMBiJtl9EpK0Au9ZFRt0NsvLs8CPR8cKGsgtavxg==", "event"=>{"title"=>"Flight MU5616", "time"=>"17:00", "place"=>"Harbin Taiping International Airport"}, "commit"=>"Create Event"}
+Filter chain halted as #<Proc:0x0000000cb4c268@C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2017-01-05 22:42:18 +0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0eTjU0SJUqkYKyNWwN+dE+WiQ26ApEebIyAyKQkk9qEGcztMBiJtl9EpK0Au9ZFRt0NsvLs8CPR8cKGsgtavxg==", "event"=>{"title"=>"Flight MU5616", "time"=>"17:00", "place"=>"Harbin Taiping International Airport"}, "commit"=>"Create Event"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "time", "place", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Flight MU5616"], ["time", "17:00"], ["place", "Harbin Taiping International Airport"], ["created_at", 2017-01-05 14:42:18 UTC], ["updated_at", 2017-01-05 14:42:18 UTC]]
+  [1m[35m (31.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/6
+Completed 302 Found in 69ms (ActiveRecord: 31.8ms)
+
+
+Started GET "/events/6" for ::1 at 2017-01-05 22:42:19 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 100ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-05 22:42:21 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 78ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/4/edit" for ::1 at 2017-01-05 22:42:25 +0800
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (15.6ms)
+  Rendered events/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 84ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/events/4" for ::1 at 2017-01-05 22:42:28 +0800
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SXKsv+64NCcHR6Fxb1Z/R9LZne4uanO2YoWuU+Wivuye5XSgrBMLGc5FqWeBfHMFgDiyPBXyPNk91T3WblDniw==", "event"=>{"title"=>"The Magic of JavaScript", "time"=>"13:00", "place"=>"NTUC Building, Marina Sand Drive"}, "commit"=>"Update Event", "id"=>"4"}
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (31.3ms)[0m  [1m[33mUPDATE "events" SET "time" = ?, "updated_at" = ? WHERE "events"."id" = ?[0m  [["time", "13:00"], ["updated_at", 2017-01-05 14:42:28 UTC], ["id", 4]]
+  [1m[35m (35.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/4
+Completed 302 Found in 69ms (ActiveRecord: 66.5ms)
+
+
+Started GET "/events/4" for ::1 at 2017-01-05 22:42:29 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 68ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-05 22:42:31 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 53ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-08 21:53:33 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 483ms (Views: 469.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-08 21:53:55 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 85ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-10 12:55:32 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 438ms (Views: 412.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-10 12:55:48 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 84ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/1" for ::1 at 2017-01-10 12:55:50 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 100ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-10 12:55:56 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 69ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2017-01-10 12:58:32 +0800
+Processing by EventsController#new as HTML
+Filter chain halted as #<Proc:0x00000006589fc0@C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2017-01-10 12:58:54 +0800
+Processing by EventsController#new as HTML
+Filter chain halted as #<Proc:0x00000006589fc0@C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2017-01-10 12:59:07 +0800
+Processing by EventsController#new as HTML
+Filter chain halted as #<Proc:0x00000006589fc0@C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for ::1 at 2017-01-10 13:04:43 +0800
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (62.5ms)
+  Rendered events/new.html.erb within layouts/application (78.2ms)
+Completed 200 OK in 138ms (Views: 122.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2017-01-10 13:05:10 +0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MUuevedKXGR3mGavfz4UsgsXCNJ4+8JZnUVwGMydcEdx0LsNGJDXxelVMk7QxL61NX61+DbVFAnfrA1Ydb+rSA==", "event"=>{"title"=>"Vector Space Model", "time"=>"19:00", "place"=>"NUS"}, "commit"=>"Create Event"}
+Filter chain halted as #<Proc:0x00000006589fc0@C:/Ruby/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2017-01-10 13:05:10 +0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MUuevedKXGR3mGavfz4UsgsXCNJ4+8JZnUVwGMydcEdx0LsNGJDXxelVMk7QxL61NX61+DbVFAnfrA1Ydb+rSA==", "event"=>{"title"=>"Vector Space Model", "time"=>"19:00", "place"=>"NUS"}, "commit"=>"Create Event"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "time", "place", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Vector Space Model"], ["time", "19:00"], ["place", "NUS"], ["created_at", 2017-01-10 05:05:10 UTC], ["updated_at", 2017-01-10 05:05:10 UTC]]
+  [1m[35m (21.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/7
+Completed 302 Found in 53ms (ActiveRecord: 21.8ms)
+
+
+Started GET "/events/7" for ::1 at 2017-01-10 13:05:10 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 84ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2017-01-10 13:05:11 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 69ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
