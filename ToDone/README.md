@@ -5,11 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-Recommended 5.0.1
+* Ruby version<br>
+Recommended 5.0.1<br>
 Least 4.4+
 
-* System dependencies
+* System dependencies<br>
 Ruby on Rails
 
 * Configuration
