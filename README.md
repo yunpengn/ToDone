@@ -4,7 +4,7 @@ It is built by __Ruby on Rails__.
 
 ## Introduction
 This project is meant for Assigment 3 of Computing for Voluntary Welfare Organisation (CVWO) at National University of Singapore (NUS).<br>
-It is carried out during the December break of AY2016/2017.
+It is carried out in the beginning of Semester 2 AY2016/2017.
 
 Author: __Niu Yunpeng__<br>
 Matriculation No. __A0162492A__
