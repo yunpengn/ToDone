@@ -18,11 +18,11 @@ I am currently a Year 1 undergraduate student at NUS. My major is Computer Engin
 - LinkedIn: [@Yunpeng Niu](https://www.linkedin.com/in/yunpeng-niu)
 
 ## Features
-- Create/ Show / Modify / Delete (CRUD) Events
+- Create/ Show / Modify / Delete (CRUD) Events <br>
 Each task, matter or business in ToDone is called an event. Each event has three attributes, namely, title, time and place. The first two (title and time) are compulsory when creating a new event. The third one (place) is optional.
-- Basic HTTP Authentication
+- Basic HTTP Authentication <br>
 When user try to create / edit / delete any event, a HTTP authentication window will pop up and require the user to log in with username and password.
-- Categorize events
+- Categorize events <br>
 The user should be able to categorize each event under a specific tag. This is good for management and a better display. The user can also create customize tags or delete existing tags.
 
 ## Others
