@@ -1,0 +1,37 @@
+<%= render 'navbar' %>
+
+<h1>All Categories</h1>
+<p>
+	&emsp;<%= link_to 'New Category', new_category_path, class: "btn btn-success" %>
+</p>
+
+<br>
+<h3>All Events</h3>
+
+<table class="table table-striped">
+	<thead>
+		<th>Category</th>
+		<th>Title</th>
+		<th>Time</th>
+		<th>Place</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</thead>
+
+	<tbody>
+		<% @categories.each do |ct| %>
+			<% ct.events.each do |i| %>
+				<tr>
+					<td><%= link_to "#{ct.name}", category_path(ct) %></td>
+					<td><%= i.title %></td>
+					<td><%= i.time %></td>
+					<td><%= i.place %></td>
+					<td><%= link_to 'Show Details', category_event_path(ct, i) %></td>
+					<td><%= link_to 'Edit Event', edit_category_event_path(ct, i) %></td>
+					<td><%= link_to 'Delete Event', category_event_path(ct, i), method: :delete, data: {confirm: "Are you sure to delete \"#{i.title}\"?" } %></td>
+				</tr>
+			<% end %>
+		<% end %>
+	</tbody>
+</table>

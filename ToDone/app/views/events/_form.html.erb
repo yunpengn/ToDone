@@ -1,5 +1,5 @@
 <div class="container">
-	<%= form_for @event, html: {class: "form"} do |fr| %>
+	<%= form_for ([@category, @event]), html: {class: "form"} do |fr| %>
 	<% if @event.errors.any? %>
 		<div id="error_explanation" style="color:red">
 		<br>
@@ -43,7 +43,7 @@
 		</div>
 
 		<div class="col-md-1">
-			<%= link_to 'Cancel', events_path, class: "btn btn-primary" %>
+			<%= link_to 'Cancel', category_events_path, class: "btn btn-primary" %>
 		</div>
 	</div>
 <% end %>

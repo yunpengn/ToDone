@@ -1,31 +1,9 @@
-<h1>All Events - ToDone</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  http-equiv=refresh content="0;url=.././">
+</head>
+<body>
 
-<table class="table table-striped">
-	<thead>
-		<th>Title</th>
-		<th>Time</th>
-		<th>Place</th>
-	</thead>
-
-	<tbody>
-		<% @events.each do |i| %>
-		<tr>
-			<td><%= i.title %></td>
-			<td><%= i.time %></td>
-			<td><%= i.place %></td>
-			<td><%= link_to 'Show Details', event_path(i) %></td>
-			<td><%= link_to 'Edit Event', edit_event_path(i) %></td>
-			<td><%= link_to 'Delete Event', event_path(i), method: :delete, data: {confirm: "Are you sure to delete \"#{i.title}\"?" } %></td>
-		</tr>
-	<% end %>
-	</tbody>
-</table>
-
-<div class="row">
-	<div class="col-md-1">
-		<%= link_to 'All Events', events_path, class: "btn btn-primary" %>
-	</div>
-	<div class="col-md-1">
-		<%= link_to 'New Event', new_event_path, class: "btn btn-success" %>
-	</div>
-</div>
+</body>
+</html>

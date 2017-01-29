@@ -1,0 +1,40 @@
+<div class="container">
+	<%= form_for @category, html: {class: "form"} do |fr| %>
+	<% if @category.errors.any? %>
+		<div id="error_explanation" style="color:red">
+		<br>
+			<h4>The following <%= pluralize(@category.errors.count, 'error') %> prohibited this category from being saved in ToDone 2:</h4>
+			<ul>
+				<% @category.errors.full_messages.each do |i| %>
+				<li><%= i %></li>
+				<% end %>
+			</ul>
+			<br>
+		</div>
+	<% end %>
+
+	<div class="row">
+		<div class="field form-group col-md-8">
+			<%= fr.label :name, class: "control-label" %><br>
+			<%= fr.text_field :name, class: "form-control" %>
+		</div>
+
+		<div class="field form-group col-md-8">
+			<%= fr.label :description, class: "control-label" %>
+			<%= fr.text_area :description, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="field form-group col-md-1">
+			<%= button_tag(type: 'submit', class: "btn btn-success") do %>
+	 			<i class="icon-ok icon-white">Submit</i>
+			<% end %>
+		</div>
+
+		<div class="col-md-1">
+			<%= link_to 'Cancel', categories_path, class: "btn btn-primary" %>
+		</div>
+	</div>
+<% end %>
+</div>

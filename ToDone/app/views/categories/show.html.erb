@@ -1,0 +1,38 @@
+<%= render 'navbar' %>
+
+<h1>Category - <%= @category.name %></h1>
+
+<p>
+	<%= link_to 'Edit Category', edit_category_path(@category), class: "btn btn-primary" %>
+	&emsp;&emsp;&emsp;
+	<%= link_to 'Delete Category', category_path(@category),
+		 method: :delete, data: {confirm: "Are you sure to delete \"#{@category.name}\"?" }, class: "btn btn-danger" %>
+	&emsp;&emsp;&emsp;
+	<%= link_to 'New event', new_category_event_path(@category), class: "btn btn-primary" %>
+</p>
+
+<br>
+<h3>Events of <%= @category.name %></h3>
+<table class="table table-striped">
+	<thead>
+		<th>Title</th>
+		<th>Time</th>
+		<th>Place</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</thead>
+
+	<tbody>
+		<% @category.events.each do |i| %>
+		<tr>
+			<td><%= i.title %></td>
+			<td><%= i.time %></td>
+			<td><%= i.place %></td>
+			<td><%= link_to 'Show Details', category_event_path(@category, i) %></td>
+			<td><%= link_to 'Edit Event', edit_category_event_path(@category, i) %></td>
+			<td><%= link_to 'Delete Event', category_event_path(@category, i), method: :delete, data: {confirm: "Are you sure to delete \"#{i.title}\"?" } %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>

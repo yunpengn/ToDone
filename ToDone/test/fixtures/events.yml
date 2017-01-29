@@ -5,9 +5,11 @@ one:
   time: MyString
   place: MyString
   details: MyText
+  category: one
 
 two:
   title: MyString
   time: MyString
   place: MyString
   details: MyText
+  category: two

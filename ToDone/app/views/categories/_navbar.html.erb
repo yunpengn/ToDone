@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<div class="navbar-brand">
+				<p><%= link_to 'ToDone 2', categories_path %></p>
+			</div>
+		</div>
+
+		<div>
+			<ul class="nav navbar-nav">
+				<% @categories.each do |i| %>
+					<li><%= link_to "#{i.name}", category_path(i) %></li>
+					<!--
+					This #i.name may cause an error.
+					Assume that the user leaves the name of the category as blank when creating a new category,
+					then i.name cannot be found for this new category. The error checking does not help since
+					the rendering of navigation bar has a higher priority.
+					-->
+				<% end %>
+				<li><%= link_to 'New Category', new_category_path %></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<br><br><br>

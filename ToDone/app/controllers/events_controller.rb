@@ -1,47 +1,56 @@
 class EventsController < ApplicationController
-	http_basic_authenticate_with name: 'neil', password: '123', except: [:index, :show]
-	
+	http_basic_authenticate_with name: 'user', password: '123', except: [:show]
+
 	def index
 		@events = Event.all
 	end
 
 	def show
-		@event = Event.find(params[:id])
+		@categories = Category.all
+		@category = Category.find(params[:category_id])
+		@event = @category.events.find(params[:id])
 	end
 
 	def new
-		@event = Event.new
+		@categories = Category.all
+		@category = Category.find(params[:category_id])
+		@event = @category.events.build
 	end
 
 	def edit
-		@event = Event.find(params[:id])
+		@categories = Category.all
+		@category = Category.find(params[:category_id])
+		@event = @category.events.find(params[:id])
 	end
 
 	def create
-		@event = Event.new(event_params)
+		@category = Category.find(params[:category_id])
+		@event = @category.events.create(event_params)
 
 		if @event.save
-			redirect_to @event
+			redirect_to category_path(@category)
 		else
 			render 'new'
 		end
 	end
 
 	def update
-		@event = Event.find(params[:id])
+		@category = Category.find(params[:category_id])
+		@event = @category.events.find(params[:id])
 
 		if @event.update(event_params)
-			redirect_to @event
+			redirect_to category_path(@category)
 		else
 			render 'edit'
 		end
 	end
 
 	def destroy
-		@event = Event.find(params[:id])
+		@category = Category.find(params[:category_id])
+		@event = @category.events.find(params[:id])
 		@event.destroy
 
-		redirect_to events_path
+		redirect_to category_path(@category)
 	end
 
 	private

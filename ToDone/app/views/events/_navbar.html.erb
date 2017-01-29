@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<div class="navbar-brand">
+				<p><%= link_to 'ToDone 2', categories_path %></p>
+			</div>
+		</div>
+
+		<div>
+			<ul class="nav navbar-nav">
+				<% @categories.each do |i| %>
+					<li><%= link_to "#{i.name}", category_path(i) %></li>
+				<% end %>
+				<li><%= link_to 'New Category', new_category_path %></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<br><br><br>

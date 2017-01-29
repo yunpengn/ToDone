@@ -1,3 +1,5 @@
+<%= render 'navbar' %>
+
 <h1>Event Details - <%= @event.title %></h1>
 
 <table class="table table-hover">
@@ -21,9 +23,9 @@
 
 <div class="row">
 	<div class="col-md-1">
-		<%= link_to 'All Events', events_path, class: "btn btn-primary" %>
+		<%= link_to 'All Events', category_events_path(@category), class: "btn btn-primary" %>
 	</div>
 	<div class="col-md-1">
-		<%= link_to 'Edit Event', edit_event_path(@event), class: "btn btn-success" %>
+		<%= link_to 'Edit Event', edit_category_event_path(@category, @event), class: "btn btn-success" %>
 	</div>
 </div>

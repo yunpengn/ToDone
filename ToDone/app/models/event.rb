@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
-	validates :title, presence: true
-	validates :time, presence: true
+  belongs_to :category
+  validates :title, presence: true
+  validates :time, presence: true
 end
