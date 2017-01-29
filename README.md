@@ -23,6 +23,7 @@ Each task, matter or business in ToDone is called an event. Each event has three
 
 - Basic HTTP Authentication <br>
 When user try to create / edit / delete any event, a HTTP authentication window will pop up and require the user to log in with username and password.<br>
+__Notice:__ Default username and password is "__user__" and "__123__".<br>
 
 - Categorize events <br>
 The user should be able to categorize each event under a specific tag. This is good for management and a better display. The user can also create customize tags or delete existing tags.<br>
