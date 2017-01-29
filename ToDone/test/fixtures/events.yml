@@ -4,8 +4,10 @@ one:
   title: MyString
   time: MyString
   place: MyString
+  details: MyText
 
 two:
   title: MyString
   time: MyString
   place: MyString
+  details: MyText

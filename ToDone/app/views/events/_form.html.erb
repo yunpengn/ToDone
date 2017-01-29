@@ -1,36 +1,50 @@
-<!--
-Why this single form can be used in every page without special configuration?
-Because @event is a resource corresponding to a full set of RESTful routes, and Rails is able to infer which URI and which method to use.
-For more details, check Resource-oriented Style
--->
-<%= form_for @event do |fr| %>
+<div class="container">
+	<%= form_for @event, html: {class: "form"} do |fr| %>
 	<% if @event.errors.any? %>
-	<div id="error_explanation">
-		<h3>The following <%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved: </h3>
-		<ul>
-			<% @event.errors.full_messages.each do |i| %>
-			<li><%= i %></li>
-			<% end %>
-		</ul>
-	</div>
+		<div id="error_explanation" style="color:red">
+		<br>
+			<h4>The following <%= pluralize(@event.errors.count, 'error') %> prohibited this event from being saved in ToDone:</h4>
+			<ul>
+				<% @event.errors.full_messages.each do |i| %>
+				<li><%= i %></li>
+				<% end %>
+			</ul>
+			<br>
+		</div>
 	<% end %>
 
-	<p>
-		<%= fr.label :title %>
-		<%= fr.text_field :title %>
-	</p>
+	<div class="row">
+		<div class="field form-group col-md-8">
+			<%= fr.label :title, class: "control-label" %>
+			<%= fr.text_field :title, class: "form-control" %>
+		</div>
 
-	<p>
-		<%= fr.label :time %>
-		<%= fr.text_field :time %>
-	</p>
+		<div class="field form-group col-md-8">
+			<%= fr.label :time, class: "control-label" %>
+			<%= fr.text_field :time, class: "form-control" %>
+		</div>
 
-	<p>
-		<%= fr.label :place %>
-		<%= fr.text_field :place %>
-	</p>
+		<div class="field form-group col-md-8">
+			<%= fr.label :place, class: "control-label" %>
+			<%= fr.text_field :place, class: "form-control" %>
+		</div>
 
-	<p>
-		<%= fr.submit %>
-	</p>
+		<div class="field form-group col-md-8">
+			<%= fr.label :details, class: "control-label" %>
+			<%= fr.text_area :details, class: "form-control" %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="field form-group col-md-1">
+			<%= button_tag(type: 'submit', class: "btn btn-success") do %>
+	 			<i class="icon-ok icon-white">Submit</i>
+			<% end %>
+		</div>
+
+		<div class="col-md-1">
+			<%= link_to 'Cancel', events_path, class: "btn btn-primary" %>
+		</div>
+	</div>
 <% end %>
+</div>

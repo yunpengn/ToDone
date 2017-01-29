@@ -1,15 +1,15 @@
 class EventsController < ApplicationController
-	http_basic_authenticate_with name: 'neil', password: '86395676', except: [:index, :show]
-
+	http_basic_authenticate_with name: 'neil', password: '123', except: [:index, :show]
+	
 	def index
-		@all_events = Event.all
+		@events = Event.all
 	end
 
 	def show
 		@event = Event.find(params[:id])
 	end
 
-	def  new
+	def new
 		@event = Event.new
 	end
 
@@ -18,9 +18,8 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		# There is a naming convention when using Ruby on Rails to build a Web Application
-		# You had better name the below instance variable as "event", in its singular form
 		@event = Event.new(event_params)
+
 		if @event.save
 			redirect_to @event
 		else
@@ -47,6 +46,6 @@ class EventsController < ApplicationController
 
 	private
 	def event_params
-		params.require(:event).permit(:title, :time, :place)
+		params.require(:event).permit(:title, :time, :place, :details)
 	end
 end
