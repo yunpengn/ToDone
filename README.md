@@ -1,6 +1,6 @@
 # To Done
 This project builds a task manager as a personal assistant in order to improve daily efficiency. Not tell you todos, but help them become dones.<br>
-It is built by __Ruby on Rails__.
+It is built built on __Ruby on Rails__ as back-end framework and __Bootstrap__ as front-end framework
 
 ## Introduction
 This project is meant for Assigment 3 of Computing for Voluntary Welfare Organisation (CVWO) at National University of Singapore (NUS).<br>
