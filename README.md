@@ -7,7 +7,7 @@ This project is meant for Assigment 3 of Computing for Voluntary Welfare Organis
 It is carried out in the beginning of Semester 2 AY2016/2017.
 
 Author: __Niu Yunpeng__<br>
-Matriculation No. __A0162492A__
+Matriculation No. __A016****A__
 
 ### About me
 I am currently a Year 1 undergraduate student at NUS. My major is Computer Engineering. I love programming and solving challenges. I received NUS Science & Technology (S&T) Scholarship and had good academic results.
@@ -26,6 +26,9 @@ When user try to create / edit / delete any event, a HTTP authentication window 
 
 - Categorize events <br>
 The user should be able to categorize each event under a specific tag. This is good for management and a better display. The user can also create customize tags or delete existing tags.<br>
+
+- Bootstrap <br>
+ToDone is using Bootstrap 3.3.7 by Twitter for pages formatting.
 
 
 ## Others
