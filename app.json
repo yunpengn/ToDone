@@ -1,0 +1,18 @@
+{
+  "name": "ToDone",
+  "description": "Json file for review apps on Heroku",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/Beckid/ToDone"
+    }
+  ]
+}
