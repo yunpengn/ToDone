@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/677dee7eaa8449c390a04abe2e7f2daf)](https://www.codacy.com/app/Beckid/ToDone?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Beckid/ToDone&amp;utm_campaign=Badge_Grade)
+
 # To Done
 This project builds a task manager as a personal assistant in order to improve daily efficiency. Not tell you todos, but help them become dones.<br>
 It is built built on __Ruby on Rails__ as back-end framework and __Bootstrap__ as front-end framework.
