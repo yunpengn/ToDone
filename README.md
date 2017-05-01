@@ -4,7 +4,7 @@
 This project builds a task manager as a personal assistant in order to improve daily efficiency. Not tell you todos, but help them become dones.<br>
 It is built built on __Ruby on Rails__ as back-end framework and __Bootstrap__ as front-end framework.
 
-__Notice__: You may want to have a look at a working copy of ToDone 2 hosted [here](http://to-done-2.herokuapp.com/)
+__Notice__: You may want to have a look at a working copy of ToDone 2 hosted [here](http://to-done-2.herokuapp.com/).
 
 ## Introduction
 This project is meant for Assigment 3 of Computing for Voluntary Welfare Organisation (CVWO) at National University of Singapore (NUS).<br>
